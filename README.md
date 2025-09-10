@@ -27,11 +27,12 @@ This repo is both:
 📦 java-essentials-playground
  ┣ 📜 README.md
  ┣ 📂 basics
- ┣ 📂 control-flow
+ ┣ 📂 datatypes
+ ┣ 📂 controlflow
  ┣ 📂 arrays
  ┣ 📂 oops
  ┣ 📂 multithreading
- ┣ 📂 collections
+ ┣ 📂 collectionframework
 
 ```
 
