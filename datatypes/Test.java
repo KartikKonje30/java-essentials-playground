@@ -146,21 +146,61 @@ public class Test {
         // Using Constructor from String Class
 
         // Lets understand how a string assigns value
-        // Inside JVM their is a dedicated space for stroring objects known as heap memory in which their is a dedicated part for referencing multiple repeatative strings called string pool.
+        // Inside JVM their is a dedicated space for stroring objects known as heap memory in which their is a dedicated part for referencing unique string literals called string pool.
+        // The Java String Pool, also known as the String Constant Pool or String Literal Pool, is a special storage area within the Java Heap memory. Its primary purpose is to optimize memory usage by storing unique string literals and preventing the creation of duplicate string objects.
+        // see whenever we create a variable for example:
+        // int a = 1;
+        // It gets stored in stack memory in JVM evaluating there is a variable name 'a' in which value 1 is stored.
+        // when a string is created, a reference gets assigned for that string in the heap memory inside string pool.
+        // And when another string having same value is created at such instance that same reference gets assigned, pointing to the same memory space for that newly created variable.
+        // Strings are immutable in Java
+        // The immutability of String objects in Java is crucial for the String Pool to function effectively, as it ensures that shared string objects in the pool cannot be modified, preventing unexpected side effects.
+        // This is only considered in terms of using string literal method
+        // when we create a string using constructor in such case new memory gets assigned for that new object inside heap memory and outside string pool.
 
-        
+        System.out.println("String Creation:");
+        System.out.println("----------------");
+
 
         String str1 = "Hello";
         String str2 = "Hello";
         String str3 = new String("Hello");
 
-        System.out.println(str1 == str2); // true as it is comparing references
-        System.out.println(str2 == str3); // false as it is comparing references
-        System.out.println(str1.equals(str3)); // true as it is comparing values using .equals method from String class
+        System.out.println("Comparing variables having same reference from pool - " + (str1 == str2)); // true (same reference in pool)
+        System.out.println("Comparing different objects - " + (str2 == str3)); // false (different objects)
+        System.out.println("Comparing similar context using .equals method - " + str1.equals(str3)); // true as it is comparing values using .equals method from String class (same content)
 
+        System.out.println();
 
+        String name = "John";
+        name.toUpperCase();
+        System.out.println(name); // Still prints John
 
+        // Correct way
+        name = name.toUpperCase();
+        System.out.println(name); // Prints JOHN
 
+        System.out.println();
+        
+        // Common String Operations
+
+        String text = "Hello World";
+
+        // Length
+        System.out.println(text.length()); // 10
+
+        // Accessing characters
+        System.out.println(text.charAt(0)); // 'H'
+
+        // Substring
+        System.out.println(text.substring(0,5)); // "Hello"
+
+        // Contains, startsWith, endsWith
+        System.out.println(text.contains( "World")); // true
+
+        // Replace
+        String newText = text. replace("World", "Java");
+        System.out.println(newText);
 
     }
 }
