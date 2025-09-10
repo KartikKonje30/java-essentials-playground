@@ -3,7 +3,8 @@ public class Test {
         
         System.out.println();
 
-        System.out.println("Hello Java!");
+        System.out.println("Datatypes in Java with range");
+        System.out.println("-----------------------------");
 
         // Datatypes in Java
 
@@ -28,7 +29,7 @@ public class Test {
         System.out.println();
 
         System.out.println("Byte Range:");
-        System.out.println("------------");
+        System.out.println("-----------");
         byte a = 127;
         System.out.println("Example byte value: " + a);
         System.out.println("Minimum byte value: " + Byte.MIN_VALUE);  // -2^7 OR -128 (8 bits)
@@ -48,7 +49,7 @@ public class Test {
         System.out.println();
 
         System.out.println("Int Range:");
-        System.out.println("-----------");
+        System.out.println("----------");
         int c = 2;
         System.out.println("Example int value: " + c);
         System.out.println("Minimum int value: " + Integer.MIN_VALUE);  // -2^31 OR -2,147,483,648 (32 bites)
@@ -58,7 +59,7 @@ public class Test {
         System.out.println();
 
         System.out.println("Long Range:");
-        System.out.println("------------");
+        System.out.println("-----------");
         long d = 922337203685477580l;
         System.out.println("Example int value: " + d);
         System.out.println("Minimum int value: " + Long.MIN_VALUE);  // -2^63 (64 bites)
@@ -88,6 +89,78 @@ public class Test {
         System.out.println("Largest negative double: -" + Double.MAX_VALUE);
         System.out.println("Smallest negative double: -" + Double.MIN_VALUE);
         System.out.println();
+
+        System.out.println();
+
+        char g = 'A';
+        System.out.println("Character Ranges:");
+        System.out.println("-----------------");
+        System.out.println("Example char value: " + g);
+        System.out.println("Minimum char value: " + (int) Character.MIN_VALUE);  // 0
+        System.out.println("Maximum char value: " + (int) Character.MAX_VALUE);  // 65535
+        System.out.println("Specific char from value: " + ((char) 10084));  // 
+        // Common ASCII examples (0-127 range) 
+        // all alphabets form a-z to A-Z
+        System.out.println();
+
+        System.out.println("Widening or Implicit Conversion Examples:");
+        System.out.println("-----------------------------------------");
+        byte byteValue = 10;  // 1 byte // cup
+        short shortValue = byteValue;  // 2 bytes // glass
+        int intValue = shortValue;  // 4 bytes // jug
+        long longValue = intValue;  // 8 bytes // bucket
+        float floatValue = longValue;  // 4 bytes
+        double doubleValue = floatValue;  // 8 bytes
+        System.out.println("int: " + intValue);
+        System.out.println("long: " + longValue);
+        System.out.println("float: " + floatValue);
+        System.out.println("double: " + doubleValue);
+        System.out.println();
+
+        System.out.println("Narrowing or Explicit Conversion Examples:");
+        System.out.println("------------------------------------------");
+        double doubleValue2 = 123.456;  // 8 bytes
+        float floatValue2 = (float) doubleValue2;
+        long longValue2 = (long) floatValue2;
+        int intValue2 = (int) longValue2;
+        System.out.println("double: " + doubleValue2);
+        System.out.println("float: " + floatValue2);
+        System.out.println("long: " + longValue2);
+        System.out.println("int: " + intValue2);
+        System.out.println();
+
+        // Non-Primitive Datatypes
+
+        // Classes
+        // String 
+        // Arrays
+        // Enums
+
+        // String Creation Methods
+        // We can create a string using two methods:
+        
+        //1. String n = "char";
+        // Using String literals
+
+        //2. String n = new String("char");
+        // Using Constructor from String Class
+
+        // Lets understand how a string assigns value
+        // Inside JVM their is a dedicated space for stroring objects known as heap memory in which their is a dedicated part for referencing multiple repeatative strings called string pool.
+
+        
+
+        String str1 = "Hello";
+        String str2 = "Hello";
+        String str3 = new String("Hello");
+
+        System.out.println(str1 == str2); // true as it is comparing references
+        System.out.println(str2 == str3); // false as it is comparing references
+        System.out.println(str1.equals(str3)); // true as it is comparing values using .equals method from String class
+
+
+
+
 
     }
 }
