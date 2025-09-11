@@ -83,7 +83,7 @@ public class Operator {
         System.out.println("---------------------");
         System.out.println("5 >> 1 = " + (b1 >> 1));
         System.out.println("Binary: " + Integer.toBinaryString(b1 >> 1));
-
+        
         // Relational Operators
         // They return a boolean result; true | false
         // < (less than), 
@@ -93,11 +93,16 @@ public class Operator {
         // == (equals equal to), 
         // != (Not equal to )
 
+        System.out.println("\nRelational Operators");
+        System.out.println("---------------------");
+
+
         // example: 
-        System.out.println(b1 < b2);
-        System.out.println(b1 >= b2);
-        System.out.println(b1 == b2);
-        System.out.println(b1 != b2);
+        System.out.println("b1 = 5 & b2 = 3");
+        System.out.println("\nb1 < b2 = " + (b1 < b2));
+        System.out.println("b1 >= b2 = " + (b1 >= b2));
+        System.out.println("b1 == b2 = " + (b1 == b2));
+        System.out.println("b1 != b2 = " + (b1 != b2));
 
 
         // Logical Operators
@@ -106,8 +111,13 @@ public class Operator {
         // || (OR), 
         // ! (NOT)
 
+        System.out.println("\nLogical Operators");
+        System.out.println("---------------------");
+
         // example:
-        System.out.println(b1 < b2 && b2 > 5);
+        System.out.println("b1 < b2 && b2 > 5 = " + (b1 < b2 && b2 > 5));
+        System.out.println();
+        
 
     }
 }
