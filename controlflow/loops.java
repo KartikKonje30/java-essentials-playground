@@ -1,5 +1,5 @@
 
-public class loops {
+public class Loops {
 
     public static void main(String[] args){
     
@@ -17,11 +17,11 @@ public class loops {
         num++;
     }
 
-    //2. Do while Loop 
+    //2. Do-while Loop 
     // similar to the while loop, but do while loop will atleast run once apart from whatever the condition might be given
     // first it will run the statement inside do block and then check condition
 
-    System.out.println("\nDo While Loop Example:");
+    System.out.println("\nDo-While Loop Example:");
     System.out.println("------------------------");
 
     int num2 = 11;
@@ -39,6 +39,20 @@ public class loops {
 
     for(int i = 0; i<=10; i++){
         System.out.println("(" + i + ") Hello");
+    }
+
+    //3. For-each Loop
+
+    System.out.println("\nFor-each Loop Example:");
+    System.out.println("-------------------");
+
+    int[] arr = new int[5];
+    arr[4] = 20;
+
+    // Here i is not referring to the index but the element present in every index
+    
+    for(int i : arr){
+        System.out.println("arr[" + i + "]");
     }
 
 }
